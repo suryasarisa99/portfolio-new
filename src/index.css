@@ -1,0 +1,350 @@
+/* credit vercel for the font, dunno if i have to*/
+
+/* Geist from vercel */
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* GeistMono from vercel */
+@font-face {
+  font-family: 'GeistMono';
+  src: url('/fonts/GeistMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeistMono';
+  src: url('/fonts/GeistMono-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeistMono';
+  src: url('/fonts/GeistMono-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeistMono';
+  src: url('/fonts/GeistMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Inspired by Vercel */
+
+@layer base {
+  /* root is light mode*/
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+    --scrollbar-track: 240 4.8% 95.9%;
+    --scrollbar-thumb: 240 5.9% 85%;
+    --scrollbar-thumb-hover: 240 5.9% 75%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.5rem;
+    --scrollbar-track: 240 3.7% 15.9%;
+    --scrollbar-thumb: 240 3.7% 25%;
+    --scrollbar-thumb-hover: 240 3.7% 35%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .life {
+    --background: 150 50% 92%; 
+    --foreground: 150 20% 15%; 
+    --card: 150 40% 85%;
+    --card-foreground: 150 25% 20%;
+    --popover: 160 45% 90%; 
+    --popover-foreground: 150 25% 15%;
+    --primary: 150 35% 40%; 
+    --primary-foreground: 150 15% 85%; 
+    --secondary: 160 25% 65%;
+    --secondary-foreground: 150 15% 20%;
+    --muted: 140 20% 75%; 
+    --muted-foreground: 150 15% 35%;
+    --accent: 160 25% 70%; 
+    --accent-foreground: 150 20% 20%;
+    --destructive: 0 50% 35%; 
+    --destructive-foreground: 150 15% 90%;
+    --border: 150 25% 45%;
+    --input: 150 20% 30%;
+    --ring: 160 30% 50%;   
+    --radius: 0.5rem; 
+    --scrollbar-track: 150 40% 85%;
+    --scrollbar-thumb: 150 35% 60%;
+    --scrollbar-thumb-hover: 150 35% 50%;
+  }
+
+  .cyber {
+    --background: 265 30% 7%;
+    --foreground: 0 0% 95%;
+    --card: 265 30% 10%;
+    --card-foreground: 0 0% 96%;
+    --popover: 265 30% 12%;
+    --popover-foreground: 0 0% 90%;
+    --primary: 305 94% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 230 100% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 265 15% 15%;
+    --muted-foreground: 0 0% 80%;
+    --accent: 270 80% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 90% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 265 20% 25%;
+    --input: 265 20% 20%;
+    --ring: 305 100% 60%;
+    --radius: 0.25rem;
+    --scrollbar-track: 265 30% 12%;
+    --scrollbar-thumb: 305 94% 42%;
+    --scrollbar-thumb-hover: 305 94% 52%;
+  }
+  
+  .cloud {
+    --background: 222 100% 95%;
+    --foreground: 222 5% 10%;
+    --card: 222 50% 90%;
+    --card-foreground: 222 5% 15%;
+    --popover: 222 100% 95%;
+    --popover-foreground: 222 100% 10%;
+    --primary: 222 45% 72%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 222 30% 70%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 222 30% 85%;
+    --muted-foreground: 222 5% 35%;
+    --accent: 222 30% 80%;
+    --accent-foreground: 222 5% 15%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 222 5% 90%;
+    --border: 222 30% 50%;
+    --input: 222 30% 26%;
+    --ring: 222 45% 72%;
+    --radius: 1rem;
+    --scrollbar-track: 222 50% 90%;
+    --scrollbar-thumb: 222 45% 62%;
+    --scrollbar-thumb-hover: 222 45% 52%;
+  }
+
+  .forest {
+    --background: 220 25% 8%;       
+    --foreground: 120 15% 85%;      
+    --card: 200 20% 12%;              
+    --card-foreground: 120 15% 85%;   
+    --popover: 220 25% 8%;             
+    --popover-foreground: 120 15% 85%; 
+    --primary: 140 30% 45%;            
+    --primary-foreground: 35 25% 95%;  
+    --secondary: 160 15% 25%;          
+    --secondary-foreground: 35 25% 95%; 
+    --muted: 200 20% 15%;             
+    --muted-foreground: 120 10% 75%;  
+    --accent: 140 20% 35%;            
+    --accent-foreground: 35 25% 95%; 
+    --destructive: 0 50% 35%;         
+    --destructive-foreground: 35 25% 95%; 
+    --border: 200 20% 18%;             
+    --input: 200 20% 18%;             
+    --ring: 140 30% 45%;               
+    --radius: 0.375rem;                
+    --scrollbar-track: 200 20% 12%;    
+    --scrollbar-thumb: 140 25% 35%;   
+    --scrollbar-thumb-hover: 140 30% 40%; 
+  }
+
+  .amethyst {
+    --background: 250.91 18.64% 11.57%;
+    --foreground: 250.00 36.00% 90.20%;
+    --card: 251.25 20% 15.69%;
+    --card-foreground: 250.00 36.00% 90.20%;
+    --popover: 251.25 20% 15.69%;
+    --popover-foreground: 250.00 36.00% 90.20%;
+    --primary: 263.08 32.50% 68.63%;
+    --primary-foreground: 250.91 18.64% 11.57%;
+    --secondary: 254.48 14.87% 38.24%;
+    --secondary-foreground: 250.00 36.00% 90.20%;
+    --muted: 254.12 20.99% 15.88%;
+    --muted-foreground: 258.95 10.38% 64.12%;
+    --accent: 271.76 15.60% 21.37%;
+    --accent-foreground: 345.52 69.05% 83.53%;
+    --destructive: 0 68.67% 67.45%;
+    --destructive-foreground: 250.91 18.64% 11.57%;
+    --border: 252 18.52% 21.18%;
+    --input: 249.47 19.59% 19.02%;
+    --ring: 263.08 32.50% 68.63%;
+    --radius: 0.5rem;
+    --scrollbar-track: 250.91 18.64% 11.57%;
+    --scrollbar-thumb: 263.08 32.50% 68.63%;
+    --scrollbar-thumb-hover: 263.08 32.50% 68.63%;
+  }
+
+  .vintage {
+    --background: 44.0000 42.8571% 93.1373%;
+    --foreground: 28.5714 16.5354% 24.9020%;
+    --card: 42.0000 100.0000% 98.0392%;
+    --card-foreground: 28.5714 16.5354% 24.9020%;
+    --popover: 42.0000 100.0000% 98.0392%;
+    --popover-foreground: 28.5714 16.5354% 24.9020%;
+    --primary: 30.0000 33.8710% 48.6275%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40.6452 34.8315% 82.5490%;
+    --secondary-foreground: 28.9655 18.7097% 30.3922%;
+    --muted: 39 34.4828% 88.6275%;
+    --muted-foreground: 32.3077 18.4834% 41.3725%;
+    --accent: 42.8571 32.8125% 74.9020%;
+    --accent-foreground: 28.5714 16.5354% 24.9020%;
+    --destructive: 9.8438 54.7009% 45.8824%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 40.0000 31.4286% 79.4118%;
+    --input: 40.0000 31.4286% 79.4118%;
+    --ring: 30.0000 33.8710% 48.6275%;
+    --radius: 0.25rem;
+    --scrollbar-track: 42.0000 100.0000% 98.0392%;
+    --scrollbar-thumb: 30.0000 33.8710% 48.6275%;
+    --scrollbar-thumb-hover: 30.0000 33.8710% 48.6275%;
+  }
+
+
+
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased min-h-screen selection:bg-primary/20;
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+    font-family: 'Geist', sans-serif;
+  }
+  
+  code, pre, kbd, samp {
+    font-family: 'GeistMono', monospace;
+  }
+  
+  .font-mono {
+    font-family: 'GeistMono', monospace;
+  }
+
+  /* ---------- scrollbar styles ---------- */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-[hsl(var(--scrollbar-track))];
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[hsl(var(--scrollbar-thumb))] 
+           rounded-full 
+           transition-colors 
+           duration-200;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-[hsl(var(--scrollbar-thumb-hover))];
+  }
+}
+
+/* ---break---*/
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
