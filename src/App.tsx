@@ -1,5 +1,5 @@
 ﻿/**
- * Copyright (c) 2025 Yanis Sebastian Zürcher
+ * Copyright (c) 2025 Sarisa Jaya Surya
  *
  * This file is part of a proprietary project and is governed by the terms in LICENSE.
  * Unauthorized use, modification, or distribution is prohibited. All rights reserved.
@@ -17,7 +17,7 @@ import { CommandMenu } from "./components/Command";
 import { useCommandMenuKeyboardShortcut } from "./hooks/use-command-menu";
 import { Conditionals } from "./components/Conditionals";
 import { AnimatedRoutes } from "./components/AnimatedRoutes";
-import  ClickSpark from "./components/ClickSpark";
+import ClickSpark from "./components/ClickSpark";
 
 // create new query client instance
 const queryClient = new QueryClient();
@@ -35,14 +35,14 @@ const App = () => (
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <ClickSpark
-              sparkColor='hsl(var(--primary))'
-              sparkSize={8}
-              sparkRadius={15}
-              sparkCount={8}
-              duration={400}
-            >
+            sparkColor="hsl(var(--primary))"
+            sparkSize={8}
+            sparkRadius={15}
+            sparkCount={8}
+            duration={400}
+          >
             <div className="min-h-screen flex flex-col">
-              <Toaster position="top-center"/>
+              <Toaster position="top-center" />
               <BrowserRouter>
                 <KeyboardShortcuts />
                 <CommandMenu />
@@ -59,4 +59,3 @@ const App = () => (
 );
 
 export default App;
-

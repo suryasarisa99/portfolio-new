@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2025 Yanis Sebastian Zürcher
+ * Copyright (c) 2025 Sarisa Jaya Surya
  *
  * This file is part of a proprietary project and is governed by the terms in LICENSE.
  * Unauthorized use, modification, or distribution is prohibited. All rights reserved.
@@ -491,7 +491,7 @@ export const translations = {
       backHome: "Zurück",
       viewSkills: "Fähigkeiten ansehen",
       intro:
-        "Ich bin Yanis Sebastian Zürcher, ein 17-jähriger Softwareentwickler aus Zürich, Schweiz. Ich studiere Informatik an der WISS, aber das meiste habe ich mir durch eigene Projekte beigebracht – nicht durch die Schule.",
+        "Ich bin Sarisa Jaya Surya, ein 17-jähriger Softwareentwickler aus Zürich, Schweiz. Ich studiere Informatik an der WISS, aber das meiste habe ich mir durch eigene Projekte beigebracht – nicht durch die Schule.",
       hobbies:
         "Ich konzentriere mich darauf, schnelle, saubere und minimalistische Webanwendungen zu entwickeln. Ob Full-Stack-Plattformen oder elegante Frontends – mir sind Klarheit, Performance und ein durchdachtes Nutzererlebnis wichtig. Ich arbeite ständig an meinen eigenen Ideen und entwickle Dinge, die sich genauso gut anfühlen, wie sie funktionieren.",
       philosophy: {
@@ -788,7 +788,7 @@ export const translations = {
       backHome: "Regresar",
       viewSkills: "Ver Habilidades",
       intro:
-        "Soy Yanis Sebastian Zürcher, un desarrollador de software de 17 años de Zúrich, Suiza. Estudio Ciencias de la Computación en WISS, pero la mayor parte de lo que sé lo he aprendido haciendo mis propios proyectos, no en la escuela.",
+        "Soy Sarisa Jaya Surya, un desarrollador de software de 17 años de Zúrich, Suiza. Estudio Ciencias de la Computación en WISS, pero la mayor parte de lo que sé lo he aprendido haciendo mis propios proyectos, no en la escuela.",
       hobbies:
         "Me enfoco en crear aplicaciones web rápidas, limpias y minimalistas. Ya sea desarrollando plataformas completas o interfaces pulidas, me importan la claridad, el rendimiento y una experiencia de usuario refinada. Siempre estoy desarrollando nuevas ideas propias y creando cosas que se sienten tan bien como funcionan.",
       philosophy: {
@@ -1080,7 +1080,7 @@ export const translations = {
       backHome: "ホームに戻る",
       viewSkills: "スキルを見る",
       intro:
-        "ヤニス・セバスチャン・ズルヒャー（Yanis Sebastian Zürcher）と申します。スイスのチューリッヒを拠点とする17歳のソフトウェア開発者です。WISSでコンピュータサイエンスを学んでいますが、私の知識のほとんどは学校ではなく、自分でプロジェクトを作りながら身につけたものです。",
+        "ヤニス・セバスチャン・ズルヒャー（Sarisa Jaya Surya）と申します。スイスのチューリッヒを拠点とする17歳のソフトウェア開発者です。WISSでコンピュータサイエンスを学んでいますが、私の知識のほとんどは学校ではなく、自分でプロジェクトを作りながら身につけたものです。",
       hobbies:
         "高速でクリーン、かつミニマルなWebアプリケーションの開発に注力しています。フルスタックのプラットフォームでも洗練されたフロントエンドでも、明快さ、パフォーマンス、洗練されたユーザー体験を大切にしています。常に自分のアイデアを形にし、使い心地と機能性を兼ね備えたプロダクトを作り続けています。",
       philosophy: {
@@ -1368,7 +1368,7 @@ export const translations = {
       backHome: "返回首页",
       viewSkills: "查看技术技能",
       intro:
-        "我是Yanis Sebastian Zürcher，一名来自瑞士苏黎世的17岁软件开发者。我在WISS学习计算机科学，但我大部分的知识都是通过自己做项目学来的，而不是在学校里。",
+        "我是Sarisa Jaya Surya，一名来自瑞士苏黎世的17岁软件开发者。我在WISS学习计算机科学，但我大部分的知识都是通过自己做项目学来的，而不是在学校里。",
       hobbies:
         "我专注于构建快速、简洁和极简风格的网页应用。无论是全栈平台还是精致的前端界面，我都注重清晰度、性能和良好的用户体验。我不断推动自己的创意前进，打造既美观又实用的数字产品。",
       philosophy: {
@@ -1644,7 +1644,7 @@ export const translations = {
       backHome: "На главную",
       viewSkills: "Смотреть навыки",
       intro:
-        "Я — Yanis Sebastian Zürcher, 17-летний разработчик программного обеспечения из Цюриха, Швейцария. Я изучаю информатику в WISS, но большую часть знаний получил, создавая собственные проекты, а не в школе.",
+        "Я — Sarisa Jaya Surya, 17-летний разработчик программного обеспечения из Цюриха, Швейцария. Я изучаю информатику в WISS, но большую часть знаний получил, создавая собственные проекты, а не в школе.",
       hobbies:
         "Я создаю быстрые, чистые и минималистичные веб-приложения. Независимо от того, занимаюсь ли full-stack платформами или изящными интерфейсами, для меня важны ясность, производительность и продуманный пользовательский опыт. Я постоянно воплощаю свои идеи, строя продукты, которые так же приятны в использовании, как и функциональны.",
       philosophy: {

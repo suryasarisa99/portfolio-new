@@ -1,6 +1,6 @@
 ﻿/**
- * Copyright (c) 2025 Yanis Sebastian Zürcher
- * 
+ * Copyright (c) 2025 Sarisa Jaya Surya
+ *
  * This file is part of a proprietary project and is governed by the terms in LICENSE.
  * Unauthorized use, modification, or distribution is prohibited. All rights reserved.
  * For permissions, contact yanis.sebastian.zuercher@gmail.com
@@ -16,7 +16,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { useNavigate, useLocation } from "react-router-dom";
-import { containerVariants, itemVariants, titleVariants, usePageInit } from "@/utils/transitions";
+import {
+  containerVariants,
+  itemVariants,
+  titleVariants,
+  usePageInit,
+} from "@/utils/transitions";
 import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
@@ -26,31 +31,35 @@ const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formValues, setFormValues] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
   const navigate = useNavigate();
   const location = useLocation();
-  
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const subject = params.get('subject');
-    const message = params.get('message');
-    
+    const subject = params.get("subject");
+    const message = params.get("message");
+
     if (subject || message) {
-      setFormValues(prev => ({
+      setFormValues((prev) => ({
         ...prev,
-        subject: subject || '',
-        message: message || ''
+        subject: subject || "",
+        message: message || "",
       }));
-      
+
       setTimeout(() => {
         if (formRef.current) {
-          const subjectEl = formRef.current.querySelector('[name="subject"]') as HTMLInputElement;
-          const messageEl = formRef.current.querySelector('[name="message"]') as HTMLTextAreaElement;
-          
+          const subjectEl = formRef.current.querySelector(
+            '[name="subject"]',
+          ) as HTMLInputElement;
+          const messageEl = formRef.current.querySelector(
+            '[name="message"]',
+          ) as HTMLTextAreaElement;
+
           if (subjectEl && subject) subjectEl.value = subject;
           if (messageEl && message) messageEl.value = message;
         }
@@ -60,48 +69,47 @@ const Contact = () => {
 
   const clearForm = () => {
     setFormValues({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
     });
-    
+
     if (formRef.current) {
       formRef.current.reset();
     }
-    
+
     if (window.location.search) {
-      navigate('/contact', { replace: true });
+      navigate("/contact", { replace: true });
     }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (isSubmitting) return;
-    
+
     setIsSubmitting(true);
-    
+
     const form = e.currentTarget;
     const formData = new FormData(form);
-    
+
     try {
-      const response = await fetch('https://formspree.io/f/xeqydavz', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-      
-      if (response.ok) {
-        toast.success(t.contact.successMessage);
-        clearForm();
-      } else {
-        const data = await response.json();
-        throw new Error(data.error || 'Form submission failed');
-      }
+      // const response = await fetch("https://formspree.io/f/xeqydavz", {
+      //   method: "POST",
+      //   body: formData,
+      //   headers: {
+      //     Accept: "application/json",
+      //   },
+      // });
+      // if (response.ok) {
+      //   toast.success(t.contact.successMessage);
+      //   clearForm();
+      // } else {
+      //   const data = await response.json();
+      //   throw new Error(data.error || "Form submission failed");
+      // }
     } catch (error) {
-      console.error('Submission error:', error);
+      console.error("Submission error:", error);
       toast.error("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);
@@ -117,15 +125,20 @@ const Contact = () => {
           variants={containerVariants}
           className="flex flex-col w-full"
         >
-
           <Helmet>
-            <title>Contact • Yanis Sebastian Zürcher</title>
+            <title>Contact • Sarisa Jaya Surya</title>
           </Helmet>
 
-          <motion.h1 variants={titleVariants} className="text-4xl font-bold mb-8 sm:mb-12">
+          <motion.h1
+            variants={titleVariants}
+            className="text-4xl font-bold mb-8 sm:mb-12"
+          >
             {t.contact.title}
           </motion.h1>
-          <motion.p variants={itemVariants} className="text-foreground/60 mb-8 sm:mb-12 max-w-2xl">
+          <motion.p
+            variants={itemVariants}
+            className="text-foreground/60 mb-8 sm:mb-12 max-w-2xl"
+          >
             {t.contact.description}
           </motion.p>
           <motion.form
@@ -146,7 +159,9 @@ const Contact = () => {
                   required
                   placeholder={t.contact.namePlaceholder}
                   value={formValues.name}
-                  onChange={(e) => setFormValues(prev => ({ ...prev, name: e.target.value }))}
+                  onChange={(e) =>
+                    setFormValues((prev) => ({ ...prev, name: e.target.value }))
+                  }
                 />
               </div>
               <div className="space-y-2">
@@ -160,7 +175,12 @@ const Contact = () => {
                   required
                   placeholder={t.contact.emailPlaceholder}
                   value={formValues.email}
-                  onChange={(e) => setFormValues(prev => ({ ...prev, email: e.target.value }))}
+                  onChange={(e) =>
+                    setFormValues((prev) => ({
+                      ...prev,
+                      email: e.target.value,
+                    }))
+                  }
                 />
               </div>
             </div>
@@ -175,7 +195,12 @@ const Contact = () => {
                 required
                 placeholder="Enter your subject"
                 value={formValues.subject}
-                onChange={(e) => setFormValues(prev => ({ ...prev, subject: e.target.value }))}
+                onChange={(e) =>
+                  setFormValues((prev) => ({
+                    ...prev,
+                    subject: e.target.value,
+                  }))
+                }
               />
             </div>
             <div className="space-y-2">
@@ -189,7 +214,12 @@ const Contact = () => {
                 placeholder={t.contact.messagePlaceholder}
                 className="min-h-48"
                 value={formValues.message}
-                onChange={(e) => setFormValues(prev => ({ ...prev, message: e.target.value }))}
+                onChange={(e) =>
+                  setFormValues((prev) => ({
+                    ...prev,
+                    message: e.target.value,
+                  }))
+                }
               />
             </div>
             <Button
@@ -218,4 +248,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

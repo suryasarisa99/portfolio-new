@@ -1,25 +1,30 @@
 /**
- * Copyright (c) 2025 Yanis Sebastian Zürcher
+ * Copyright (c) 2025 Sarisa Jaya Surya
  *
  * This file is part of a proprietary project and is governed by the terms in LICENSE.
  * Unauthorized use, modification, or distribution is prohibited. All rights reserved.
  * For permissions, contact yanis.sebastian.zuercher@gmail.com
  */
 
-import { Search } from "lucide-react"
-import { Button } from "./ui/button"
-import { useCommandMenu } from "../hooks/use-command-menu"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip"
+import { Search } from "lucide-react";
+import { Button } from "./ui/button";
+import { useCommandMenu } from "../hooks/use-command-menu";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./ui/tooltip";
 
 export function SearchToggle() {
-  const { toggleCommandMenu } = useCommandMenu()
-  
+  const { toggleCommandMenu } = useCommandMenu();
+
   return (
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button 
-            variant="ghost" 
+          <Button
+            variant="ghost"
             size="icon"
             className="w-9 h-9 transition-colors hover:bg-muted"
             onClick={toggleCommandMenu}
@@ -34,5 +39,5 @@ export function SearchToggle() {
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
-  )
-} 
+  );
+}

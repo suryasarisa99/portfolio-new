@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2025 Yanis Sebastian Zürcher
+ * Copyright (c) 2025 Sarisa Jaya Surya
  *
  * This file is part of a proprietary project and is governed by the terms in LICENSE.
  * Unauthorized use, modification, or distribution is prohibited. All rights reserved.
@@ -10,6 +10,7 @@ import type { HTMLAttributes } from "react";
 import type { BundledLanguage, BundledTheme } from "shiki";
 import { motion } from "motion/react";
 import { useTheme } from "next-themes";
+import { getThemeType } from "@/config/themes";
 import ShikiCode from "./code-highlighter";
 import CopyToClipboard from "./copy-to-clipboard";
 import { cn } from "@/lib/utils";
@@ -29,12 +30,14 @@ export const AdvancedCodeBlock = ({
   theme,
   className,
   ...props
-}: AdvancedBlockProps & Omit<HTMLAttributes<HTMLDivElement>, 'className'>) => {
+}: AdvancedBlockProps & Omit<HTMLAttributes<HTMLDivElement>, "className">) => {
   const { theme: currentTheme } = useTheme();
-  
+
   // Auto-select theme based on current theme if not provided
-  const selectedTheme = theme || (currentTheme === 'dark' ? 'github-dark' : 'github-light');
-  
+  const selectedTheme =
+    theme ||
+    (getThemeType(currentTheme) === "dark" ? "github-dark" : "github-dark");
+
   return (
     <motion.figure
       initial={{ opacity: 0, y: 20 }}
@@ -57,10 +60,14 @@ export const AdvancedCodeBlock = ({
             className="overflow-x-auto overflow-y-auto bg-muted/30 py-4 text-sm leading-6 text-foreground"
             style={{ paddingRight: "10px" }}
           >
-            <ShikiCode code={code} lang={lang} theme={selectedTheme as BundledTheme} />
+            <ShikiCode
+              code={code}
+              lang={lang}
+              theme={selectedTheme as BundledTheme}
+            />
           </pre>
         </div>
       </div>
     </motion.figure>
   );
-}; 
+};

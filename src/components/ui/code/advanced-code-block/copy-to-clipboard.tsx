@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2025 Yanis Sebastian Zürcher
+ * Copyright (c) 2025 Sarisa Jaya Surya
  *
  * This file is part of a proprietary project and is governed by the terms in LICENSE.
  * Unauthorized use, modification, or distribution is prohibited. All rights reserved.
@@ -17,7 +17,10 @@ interface CopyToClipboardProps {
   className?: string;
 }
 
-export default function CopyToClipboard({ code, className }: CopyToClipboardProps) {
+export default function CopyToClipboard({
+  code,
+  className,
+}: CopyToClipboardProps) {
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = async () => {
@@ -25,7 +28,7 @@ export default function CopyToClipboard({ code, className }: CopyToClipboardProp
       await navigator.clipboard.writeText(code);
       setCopied(true);
       toast.success("Code copied to clipboard!");
-      
+
       // Reset the copied state after 2 seconds
       setTimeout(() => setCopied(false), 2000);
     } catch (error) {
@@ -41,7 +44,7 @@ export default function CopyToClipboard({ code, className }: CopyToClipboardProp
       onClick={copyToClipboard}
       className={cn(
         "h-8 w-8 p-0 text-muted-foreground hover:text-foreground transition-colors",
-        className
+        className,
       )}
       aria-label={copied ? "Copied!" : "Copy code"}
     >
@@ -52,4 +55,4 @@ export default function CopyToClipboard({ code, className }: CopyToClipboardProp
       )}
     </Button>
   );
-} 
+}

@@ -1,5 +1,5 @@
 ﻿/**
- * Copyright (c) 2025 Yanis Sebastian Zürcher
+ * Copyright (c) 2025 Sarisa Jaya Surya
  *
  * This file is part of a proprietary project and is governed by the terms in LICENSE.
  * Unauthorized use, modification, or distribution is prohibited. All rights reserved.
@@ -62,7 +62,7 @@ const Projects = () => {
       description: t.projects.list.mitmui.description,
       image: "/projects/mitm.png",
       github: "https://github.com/suryasarisa99/mitmui",
-      tags: ["Flutter", "dart", "mitmproxy", "cross-platform"],
+      tags: ["Flutter", "dart", "mitmproxy", "WebSockets", "cross-platform"],
       featured: true,
       date: "May 2025",
       slug: "mitmui",
@@ -74,13 +74,13 @@ const Projects = () => {
       link: "https://sola.ysz.life",
       github: "https://github.com/lyfe691/sola",
       tags: [
-        "Portfolio",
-        "shadcn/ui",
-        "TypeScript",
         "React",
-        "Vite",
-        "Tailwind CSS",
-        "SEO",
+        "Express Js",
+        "Socket.IO",
+        "Gemini Api",
+        "Firebase Storage",
+        "MongoDB",
+        "TypeScript",
       ],
       featured: true,
       date: "Feb 2025 - Present",
@@ -101,7 +101,14 @@ const Projects = () => {
       description: t.projects.list.onenovel.description,
       image: "/projects/onenovel.png",
       github: "https://github.com/lyfe691/self",
-      tags: ["Neofetch", "Python", "Terminal", "Windows"],
+      tags: [
+        "React",
+        "Express.Js",
+        "MongoDB",
+        "Firebase",
+        "TypeScript",
+        "nodemailer",
+      ],
       featured: true,
       date: "May 2025",
       slug: "onenovel",

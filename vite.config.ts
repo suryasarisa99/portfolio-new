@@ -9,16 +9,16 @@ import path from "path";
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
-    port: 8080,
+    // port: 8080,
   },
   plugins: [
     {
-      enforce: 'pre',
+      enforce: "pre",
       ...mdx({
         remarkPlugins: [remarkGfm],
         rehypePlugins: [rehypeHighlight],
-        providerImportSource: "@mdx-js/react"
-      })
+        providerImportSource: "@mdx-js/react",
+      }),
     },
     react(),
   ],

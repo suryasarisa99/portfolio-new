@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2025 Yanis Sebastian Zürcher
+ * Copyright (c) 2025 Sarisa Jaya Surya
  *
  * This file is part of a proprietary project and is governed by the terms in LICENSE.
  * Unauthorized use, modification, or distribution is prohibited. All rights reserved.
@@ -128,12 +128,12 @@ export const NameMorpher = ({
 
   const currentName = useMemo(
     () => names[currentNameIndex],
-    [names, currentNameIndex]
+    [names, currentNameIndex],
   );
 
   const containerWidth = useMemo(
     () => `${currentName.length * ANIMATION_CONFIG.CHAR_WIDTH}em`,
-    [currentName.length]
+    [currentName.length],
   );
 
   useEffect(() => {

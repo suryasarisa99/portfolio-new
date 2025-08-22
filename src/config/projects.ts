@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2025 Yanis Sebastian Zürcher
+ * Copyright (c) 2025 Sarisa Jaya Surya
  *
  * This file is part of a proprietary project and is governed by the terms in LICENSE.
  * Unauthorized use, modification, or distribution is prohibited. All rights reserved.
@@ -39,31 +39,34 @@ export const projectPagesConfig: Record<string, ProjectPageConfig> = {
     silkNoiseIntensity: 1.8,
     silkRotation: 0.3,
     overview:
-      "Sola is the website you are currently on. It represents a modern approach to portfolio design, combining cutting-edge web technologies with thoughtful user experience. Built from the ground up with React and TypeScript, it showcases projects and skills through smooth animations, multiple themes, and a responsive design that works seamlessly across all devices. Its built to be fast and efficient, with a focus on user experience and performance.",
+      "A location-based, real-time chat app for students and teachers. It uses Socket.IO for instant messaging, Firebase Storage for media, and Gemini API to auto-assist when tutors are offline. Built with React, Express, TypeScript, and MongoDB, it’s fully responsive and optimized for quick, context-aware academic help.",
     techStack: [
       "React",
       "Express Js",
+      "Socket.IO",
       "Gemini Api",
       "Firebase Storage",
+      "MongoDB",
       "TypeScript",
-      "Vite",
-      "Tailwind CSS",
-      "Framer Motion",
-      "React Router",
     ],
     features: [
-      "Fully responsive design",
-      "Smooth page transitions",
-      "Multiple theme support",
-      "Multilingual (EN/DE/ES/JP/CN/RU) i18n",
-      "SEO optimized",
-      "Interactive animations",
-      "Command palette",
-      "Custom 3D backgrounds",
+      "Real-time messaging via Socket.IO (presence, typing, read indicators)",
+      "Location-based expert discovery and proximity routing",
+      "Gemini API fallback: auto-suggest answers when tutor is offline",
+      "Image & file uploads with resumable storage (Firebase Storage)",
+      "Responsive UI (mobile-first) with accessibility best practices",
+      "Secure auth (JWT/session) and role-based access (Student/Tutor/Admin)",
+      "Chat threads with subjects/tags and searchable history",
+      "Online/offline status, availability windows, and quick handoff",
+      "Rate-limit & spam protection for healthy conversations",
+      "Scalable backend with Express + MongoDB (indexes for queries)",
+      "Configurable notifications (in-app; push-ready)",
+      "Extensible plugin hooks for scheduling or whiteboard tools",
     ],
     links: {
-      live: "https://sola.ysz.life",
-      github: "https://github.com/lyfe691/sola",
+      live: "https://expert-location-and-communication.onrender.com/",
+      github:
+        "https://github.com/suryasarisa99/expert-location-and-communication",
     },
     mdxPath: "expertLocation",
   },
@@ -79,7 +82,7 @@ export const projectPagesConfig: Record<string, ProjectPageConfig> = {
     silkRotation: 0.2,
     overview:
       "MITMUI is a modern, responsive user interface for the popular mitm tool, designed to enhance user experience with a sleek, intuitive design. Built with Flutter, it provides a cross-platform solution that works seamlessly on all desktop. The UI is designed to be user-friendly, with a focus on simplicity and ease of use, making it accessible for both beginners and experienced users.",
-    techStack: ["Flutter", "Dart", "mitmproxy"],
+    techStack: ["Flutter", "Dart", "mitmproxy", "Websockets"],
     features: [
       "Cross-platform Desktop Support",
       "Responsive design",
@@ -113,7 +116,7 @@ export const projectPagesConfig: Record<string, ProjectPageConfig> = {
       "RiverPod state management",
     ],
     links: {
-      github: "nhttps://github.com/suryasarisa99/netmirror",
+      github: "https://github.com/suryasarisa99/netmirror",
     },
     mdxPath: "netmirror",
   },
@@ -157,7 +160,7 @@ export const projectPagesConfig: Record<string, ProjectPageConfig> = {
     silkNoiseIntensity: 1.5,
     silkRotation: 0.2,
     overview:
-      "Typingss is a Advanced typing practice app with custom word filters, datasets, frequency control, smart random generator, and adjustable word complexity.",
+      "2FA is a lightweight authenticator app built with React and Express, using Speakeasy for secure OTP generation and Firebase with MongoDB for seamless authentication and storage.",
     techStack: [
       "React",
       "Express.Js",
@@ -286,14 +289,14 @@ export const projectPagesConfig: Record<string, ProjectPageConfig> = {
     silkNoiseIntensity: 1.5,
     silkRotation: 0.2,
     overview:
-      "Self is a Windows system information display tool that brings the beloved Neofetch experience to Windows users. Built with Python, it provides customizable themes, multiple image rendering modes, and comprehensive system information display with ASCII art or image support.",
+      "One Novel is a platform where you can earn by referring friends to buy books or by uploading and selling your own. It connects readers and authors while rewarding every interaction.",
     techStack: [
-      "Python",
-      "Windows API",
-      "ASCII Art",
-      "System Information",
-      "Command Line Interface",
-      "Package Management",
+      "React",
+      "Express.Js",
+      "MongoDB",
+      "Firebase",
+      "TypeScript",
+      "nodemailer",
     ],
     features: [
       "System info display",

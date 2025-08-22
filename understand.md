@@ -5,3 +5,4 @@
 - `src/lib/translations.ts`
  it contains the translations for title and description for projects.
  we must add all, then only the type will work.
+ langs: en, de, es, ja, cn, ru,

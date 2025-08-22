@@ -5,39 +5,80 @@ import {
   CodeBlock,
 } from "@/components/MDXComponents";
 
-# Design Philosophy
+# Expert Location & Communication – Real-time, Location-Aware Student–Tutor Chat
 
-The design philosophy behind Sola centers on **minimalism with purpose**. Every element serves a function, from the subtle animations that guide user attention to the carefully chosen typography hierarchy.
+**Expert Location & Communication** is a modern, real-time chat platform that helps students quickly connect with nearby tutors and teachers. It combines **Socket.IO** for instant updates, **Firebase Storage** for media sharing, and **Gemini API** for smart assistance when a tutor is offline—delivering fast, context-aware support across devices.
 
-> "Good design is as little design as possible" - Dieter Rams
 
-The goal was to create a space where content breathes and visitors can focus on what matters most.
-
-## Technical Architecture
-
-Built with a **component-first approach** using React and TypeScript for type safety. The architecture includes:
-
-- **Vite** for fast development builds
-- **Tailwind CSS** for consistent styling and design system
-- **Framer Motion** for smooth animations and transitions
-- **React Router** for client-side routing
-- **shadcn/ui** for accessible, customizable components; works well with Tailwind CSS
+> **Why this app?** Traditional academic chats are slow, siloed, or desktop-only. This app prioritizes *proximity*, *presence*, and *performance* so students get timely help that actually fits how they learn today.
 
 <ProjectImage
   src="/projects/expert-loc.png"
-  alt="Performance metrics"
-  caption="Lighthouse performance results"
-  size="full"
+  alt="Expert Location & Communication – Realtime academic chat"
+  caption="Find nearby tutors, chat instantly, share files, and get AI help when no one’s available."
+  size="large"
 />
-
-## Future Enhancements
-
-I've already added so much that im running out of ideas, however heres what i thought of adding:
-
-- **Blog Integration**: Technical writing section
-- **Interactive Demos**: Live code examples for projects (possibly here)
-- **now** page: inspired by a <a href="https://nownownow.com/" target="_blank" rel="noopener noreferrer">now</a> page.
 
 ---
 
-_This project represents not just a portfolio, but a testament to modern web development practices and attention to detail -- It has been fun._
+## ✨ Key Features
+
+- **Realtime Chat (Socket.IO)** – Presence, typing, and read indicators keep conversations fluid.
+- **Location-Based Matching** – Connect with tutors nearby for faster, context-relevant help.
+- **AI Fallback (Gemini API)** – Auto-assist and suggested answers when tutors are offline.
+- **Images & Files** – Resumable uploads and efficient delivery via Firebase Storage.
+- **Responsive UI** – Mobile-first design that works beautifully on phones, tablets, and desktops.
+- **Roles & Security** – Student/Tutor/Admin roles, JWT sessions, and input validation.
+
+---
+
+## 🧩 Tech Stack
+
+
+
+---
+
+## 🏗️ Architecture
+
+- **Client (React + TS)**: UI, session management, optimistic updates, and media previews.
+- **Realtime Layer (Socket.IO)**: Rooms per conversation; presence, typing, and delivery receipts.
+- **API (Express + TS)**: Auth, message history, tutor discovery, AI fallback orchestration.
+- **Storage**: Firebase Storage for media; MongoDB for users, threads, messages, availability.
+- **Location**: Client shares approximate location; server performs proximity queries (geo-indexes).
+
+<ProjectGallery
+  images={[
+    { src: "/projects/expert-location-comm-chat.png", alt: "Chat screen" },
+    { src: "/projects/expert-location-comm-map.png", alt: "Nearby tutors map" },
+    { src: "/projects/expert-location-comm-profile.png", alt: "Tutor profile" }
+  ]}
+/>
+
+---
+
+
+## 🔐 Security & Compliance
+
+- **JWT or secure sessions**, HTTP-only cookies, CSRF protection.
+- **Validation & sanitization** on all inputs and uploads.
+- **Granular roles** and tutor verification hooks.
+- **Privacy**: uses approximate location; opt-in sharing; clear consent and retention policies.
+
+---
+
+## ⚙️ Deployment
+
+- **Frontend**: React + Vite with Typescript
+- **Backend**: ExpressJs + Typescript on a container platform with sticky sessions or Socket.IO adapter (e.g., Redis).
+- **DB/Storage**: MongoDB Atlas (geo-indexes), Firebase Storage for media.
+---
+
+## 🚀 Future Enhancements
+
+- **Scheduling & Bookings** – Reserve time slots, sync availability.
+- **Reputation & Reviews** – Tutor ratings and subject-level endorsements.
+- **Whiteboard & Screen Share** – Rich tutoring sessions.
+- **Push Notifications** – Native/mobile/web push for new messages.
+- **Multi-party Rooms** – Small groups and study circles.
+
+---

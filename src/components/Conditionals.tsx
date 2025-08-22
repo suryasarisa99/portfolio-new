@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2025 Yanis Sebastian Zürcher
+ * Copyright (c) 2025 Sarisa Jaya Surya
  *
  * This file is part of a proprietary project and is governed by the terms in LICENSE.
  * Unauthorized use, modification, or distribution is prohibited. All rights reserved.
@@ -14,57 +14,63 @@ import { LanguageToggle } from "./language-toggle";
 import { ThemeToggle } from "./theme-toggle";
 
 export const Conditionals = () => {
+  const ConditionalToggles = () => {
+    const location = useLocation();
 
-    const ConditionalToggles = () => {
-        const location = useLocation();
-        
-        // hide toggles on these paths and render on all others
-        const hideTogglesOn = ["/a", "/404"];
-        const isProjectPage = location.pathname.startsWith("/projects/") && location.pathname !== "/projects";
-        const shouldRender = !hideTogglesOn.some(path => location.pathname === path) && !isProjectPage;
-        
-        if (!shouldRender) return null;
-        
-        return (
-        <div className="fixed top-6 right-6 z-50 flex items-center gap-2">
-            <SearchToggle />
-            <LanguageToggle />
-            <ThemeToggle />
-        </div>
-        );
-    };
-    
-    // const ConditionalHireMe = () => {
-    //     const location = useLocation();
-        
-    //     // hide HireMe on these paths and render on all others
-    //     const hideHireMeOn = ["/404", "/a"];
-    //     const isProjectPage = location.pathname.startsWith("/projects/") && location.pathname !== "/projects";
-    //     const shouldRender = !hideHireMeOn.some(path => location.pathname === path) && !isProjectPage;
-        
-    //     if (!shouldRender) return null;
-        
-    //     return <HireMe />;
-    // };
-    
+    // hide toggles on these paths and render on all others
+    const hideTogglesOn = ["/a", "/404"];
+    const isProjectPage =
+      location.pathname.startsWith("/projects/") &&
+      location.pathname !== "/projects";
+    const shouldRender =
+      !hideTogglesOn.some((path) => location.pathname === path) &&
+      !isProjectPage;
 
-    const ConditionalFooter = () => {
-        const location = useLocation();
-        
-        // hide footer on these paths and render on all others
-        const hideFooterOn = ['/', '*', "/404", "/a"];
-        const isProjectPage = location.pathname.startsWith("/projects/") && location.pathname !== "/projects";
-        const shouldRender = !hideFooterOn.some(path => location.pathname === path) && !isProjectPage;
-        
-        if (!shouldRender) return null;
-        
-        return <Footer />;
-    };
+    if (!shouldRender) return null;
+
     return (
-        <>
-            <ConditionalFooter />
-            {/* <ConditionalHireMe /> */}
-            <ConditionalToggles />
-        </>
+      <div className="fixed top-6 right-6 z-50 flex items-center gap-2">
+        <SearchToggle />
+        <LanguageToggle />
+        <ThemeToggle />
+      </div>
     );
+  };
+
+  // const ConditionalHireMe = () => {
+  //     const location = useLocation();
+
+  //     // hide HireMe on these paths and render on all others
+  //     const hideHireMeOn = ["/404", "/a"];
+  //     const isProjectPage = location.pathname.startsWith("/projects/") && location.pathname !== "/projects";
+  //     const shouldRender = !hideHireMeOn.some(path => location.pathname === path) && !isProjectPage;
+
+  //     if (!shouldRender) return null;
+
+  //     return <HireMe />;
+  // };
+
+  const ConditionalFooter = () => {
+    const location = useLocation();
+
+    // hide footer on these paths and render on all others
+    const hideFooterOn = ["/", "*", "/404", "/a"];
+    const isProjectPage =
+      location.pathname.startsWith("/projects/") &&
+      location.pathname !== "/projects";
+    const shouldRender =
+      !hideFooterOn.some((path) => location.pathname === path) &&
+      !isProjectPage;
+
+    if (!shouldRender) return null;
+
+    return <Footer />;
+  };
+  return (
+    <>
+      <ConditionalFooter />
+      {/* <ConditionalHireMe /> */}
+      <ConditionalToggles />
+    </>
+  );
 };

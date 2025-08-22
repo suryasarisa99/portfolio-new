@@ -1,5 +1,5 @@
 ﻿/**
- * Copyright (c) 2025 Yanis Sebastian Zürcher
+ * Copyright (c) 2025 Sarisa Jaya Surya
  *
  * This file is part of a proprietary project and is governed by the terms in LICENSE.
  * Unauthorized use, modification, or distribution is prohibited. All rights reserved.
@@ -9,7 +9,7 @@
 import { useEffect, useState, useCallback } from "react";
 import { useLocation } from "react-router-dom";
 import { ArrowUp } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react"
+import { motion, AnimatePresence } from "motion/react";
 
 const SCROLL_THRESHOLD = 100; // Pixels scrolled before showing the button
 const SCROLL_DEBOUNCE_DELAY = 100; // ms
@@ -40,14 +40,14 @@ const ScrollToTop = () => {
   // Add scroll event listener with debounce
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
-    
+
     const debouncedScrollHandler = () => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => handleScroll(), SCROLL_DEBOUNCE_DELAY);
     };
 
     window.addEventListener("scroll", debouncedScrollHandler);
-    
+
     return () => {
       window.removeEventListener("scroll", debouncedScrollHandler);
       clearTimeout(timeoutId);
@@ -57,7 +57,7 @@ const ScrollToTop = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
@@ -73,8 +73,8 @@ const ScrollToTop = () => {
           transition={{ duration: 0.2 }}
           onClick={scrollToTop}
           aria-label="Scroll to top"
-          className="fixed bottom-6 right-6 p-3 rounded-full bg-primary/10 
-                   border border-primary/20 backdrop-blur-sm 
+          className="fixed bottom-6 right-6 p-3 rounded-full bg-primary/10
+                   border border-primary/20 backdrop-blur-sm
                    hover:bg-primary/20 transition-colors duration-300
                    focus:outline-none focus:ring-2 focus:ring-primary/20
                    focus:ring-offset-2 focus:ring-offset-background z-50"

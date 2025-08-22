@@ -1,5 +1,5 @@
 ﻿/**
- * Copyright (c) 2025 Yanis Sebastian Zürcher
+ * Copyright (c) 2025 Sarisa Jaya Surya
  *
  * This file is part of a proprietary project and is governed by the terms in LICENSE.
  * Unauthorized use, modification, or distribution is prohibited. All rights reserved.
@@ -108,7 +108,7 @@ const Services = () => {
               >
                 {service.highlight && (
                   <div
-                    className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 
+                    className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5
                                bg-primary text-primary-foreground text-xs rounded-full
                                font-medium shadow-sm"
                   >
@@ -153,7 +153,7 @@ const Services = () => {
                         />
                         <span>{feature}</span>
                       </li>
-                    )
+                    ),
                   )}
                 </ul>
 

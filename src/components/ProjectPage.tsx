@@ -1,17 +1,17 @@
 /**
- * Copyright (c) 2025 Yanis Sebastian Zürcher
+ * Copyright (c) 2025 Sarisa Jaya Surya
  *
  * This file is part of a proprietary project and is governed by the terms in LICENSE.
  * Unauthorized use, modification, or distribution is prohibited. All rights reserved.
  * For permissions, contact yanis.sebastian.zuercher@gmail.com
  */
 
-import React from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import React from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { usePageInit, containerVariants } from "@/utils/transitions";
-import { ArrowLeft } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import Silk from './Silk';
+import { ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import Silk from "./Silk";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -21,7 +21,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 interface ProjectPageProps {
   title: string;
@@ -42,7 +42,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
   silkScale = 1,
   silkNoiseIntensity = 1.5,
   silkRotation = 0,
-  children
+  children,
 }) => {
   const isLoaded = usePageInit(100);
   const navigate = useNavigate();
@@ -57,7 +57,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
           className="min-h-screen bg-background p-4 sm:p-6 lg:p-8"
         >
           <Helmet>
-            <title>{title} • Yanis Sebastian Zürcher</title>
+            <title>{title} • Sarisa Jaya Surya</title>
             {description && <meta name="description" content={description} />}
           </Helmet>
 
@@ -73,14 +73,14 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
                 rotation={silkRotation}
               />
             </div>
-            
+
             {/* overlay */}
             <div className="absolute inset-0 bg-black/20" />
-            
+
             {/* content */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center px-6 max-w-4xl">
-                <motion.h1 
+                <motion.h1
                   initial={{ opacity: 0, y: 25, skewY: 3 }}
                   animate={{ opacity: 1, y: 0, skewY: 0 }}
                   transition={{ duration: 0.7, ease: "easeInOut", delay: 0.2 }}
@@ -89,10 +89,14 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
                   {title}
                 </motion.h1>
                 {description && (
-                  <motion.p 
+                  <motion.p
                     initial={{ opacity: 0, y: 25 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, ease: "easeInOut", delay: 0.3 }}
+                    transition={{
+                      duration: 0.7,
+                      ease: "easeInOut",
+                      delay: 0.3,
+                    }}
                     className="text-base sm:text-lg md:text-xl text-white/90 font-light"
                   >
                     {description}
@@ -109,23 +113,29 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
                 <Breadcrumb>
                   <BreadcrumbList>
                     <BreadcrumbItem>
-                      <BreadcrumbLink href="/" className="text-xs">Home</BreadcrumbLink>
+                      <BreadcrumbLink href="/" className="text-xs">
+                        Home
+                      </BreadcrumbLink>
                     </BreadcrumbItem>
                     <BreadcrumbSeparator />
                     <BreadcrumbItem>
-                      <BreadcrumbLink href="/projects" className="text-xs">Projects</BreadcrumbLink>
+                      <BreadcrumbLink href="/projects" className="text-xs">
+                        Projects
+                      </BreadcrumbLink>
                     </BreadcrumbItem>
                     <BreadcrumbSeparator />
                     <BreadcrumbItem>
-                      <BreadcrumbPage className="text-xs font-medium">{title}</BreadcrumbPage>
+                      <BreadcrumbPage className="text-xs font-medium">
+                        {title}
+                      </BreadcrumbPage>
                     </BreadcrumbItem>
                   </BreadcrumbList>
                 </Breadcrumb>
-                
+
                 <Button
                   variant="ghost"
                   size="sm"
-                  onClick={() => navigate('/projects')}
+                  onClick={() => navigate("/projects")}
                   className="text-xs h-8 px-3"
                 >
                   <ArrowLeft className="w-3 h-3 mr-1.5" />
@@ -137,9 +147,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
 
           {/* content */}
           {children && (
-            <div className="max-w-4xl mx-auto py-12">
-              {children}
-            </div>
+            <div className="max-w-4xl mx-auto py-12">{children}</div>
           )}
         </motion.div>
       )}
@@ -147,4 +155,4 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
   );
 };
 
-export default ProjectPage; 
+export default ProjectPage;

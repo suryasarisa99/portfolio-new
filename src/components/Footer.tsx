@@ -1,5 +1,5 @@
 ﻿/**
- * Copyright (c) 2025 Yanis Sebastian Zürcher
+ * Copyright (c) 2025 Sarisa Jaya Surya
  *
  * This file is part of a proprietary project and is governed by the terms in LICENSE.
  * Unauthorized use, modification, or distribution is prohibited. All rights reserved.
@@ -77,7 +77,7 @@ const Footer = () => {
           {/* logo  */}
           <div className="space-y-4">
             <Link to="/" className="font-bold text-xl text-foreground">
-              YSZ
+              SJS
             </Link>
             <p className="text-sm text-foreground/70">
               {t.footer.madeWith} <span className="text-primary">♥</span>{" "}

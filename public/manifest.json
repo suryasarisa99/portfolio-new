@@ -1,7 +1,7 @@
 {
-  "name": "Yanis Sebastian Zürcher",
+  "name": "Sarisa Jaya Surya",
   "short_name": "YSZ",
-  "description": "Yanis Sebastian Zürcher's portfolio - Software Developer based in Zürich, Switzerland",
+  "description": "Sarisa Jaya Surya's portfolio - Software Developer based in Zürich, Switzerland",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -18,4 +18,4 @@
   "lang": "en",
   "dir": "ltr",
   "prefer_related_applications": false
-} 
+}

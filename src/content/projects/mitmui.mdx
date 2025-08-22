@@ -17,11 +17,39 @@ mitproxy uses command line interface, which is not user-friendly for everyone. i
 
 <ProjectImage
   src="/projects/mitm.png"
-  alt="Self system information display"
-  caption="One Novel - Earn Money by Referring Your Friends"
+  alt="MITMUI – Modern, Responsive UI for mitm"
+  caption="A modern, responsive UI for mitm using Flutter"
   size="large"
 />
 
 ## Technical Architecture
 
-MITMUI is built with **Flutter**, which allows for a responsive and modern user interface. The project leverages Flutter's capabilities to create a cross-platform application that can run on various desktop environments.
+MITMUI is architected to provide a seamless, cross-platform desktop experience for interacting with mitmproxy.
+
+- **UI Framework:** Flutter (cross-platform, responsive UI)
+- **Core Integration:** Connects with mitmproxy’s core via APIs and CLI hooks
+- **State Management:** Riverpod for predictable and reactive state updates
+- **Networking Layer:** WebSocket/HTTP for live traffic streaming from mitmproxy
+- **Data Handling:** Real-time parsing and visualization of intercepted requests/responses
+- **Cross-Platform Support:** Native builds for Windows, macOS, and Linux
+- **Deployment:** Distributed as desktop binaries using Flutter’s desktop support
+
+## ✨ Key Features
+
+- **Live Traffic Monitoring:** Real-time HTTP/HTTPS requests and responses
+- **Advanced Filtering:**
+  - Filter by method, URL, status code, and more
+  - Regex support for URL, body, headers, etc.
+  - Nested conditions with `AND` / `OR` operators
+- **Request/Response Inspection:** View headers, bodies, and metadata
+- **Mark & Highlight:** Bookmark or highlight patterns for quick review
+- **Intercept & Modify:** Limited support for modifying requests/responses
+- **Export:** Export filtered traffic
+
+
+## 🚀 Future Enhancements
+
+- Support for more export formats (e.g., `fetch`, `axios`, `Java OkHttp`)
+- Full request/response modification capabilities
+- **Import Feature:** Import saved sessions or exported traffic for re-analysis
+- Enhanced customization of filters and views

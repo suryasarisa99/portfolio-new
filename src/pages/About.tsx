@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2025 Yanis Sebastian Zürcher
+ * Copyright (c) 2025 Sarisa Jaya Surya
  *
  * This file is part of a proprietary project and is governed by the terms in LICENSE.
  * Unauthorized use, modification, or distribution is prohibited. All rights reserved.
@@ -333,7 +333,7 @@ const About = () => {
           className="flex flex-col w-full"
         >
           <Helmet>
-            <title>About • Yanis Sebastian Zürcher</title>
+            <title>About • Sarisa Jaya Surya</title>
           </Helmet>
 
           {/* ------------------- Title ------------------- */}
@@ -405,8 +405,8 @@ const About = () => {
             <div className="md:col-span-2 relative">
               <div className="aspect-square overflow-hidden rounded-xl border border-foreground/10 shadow-sm">
                 <motion.img
-                  src={isDarkTheme() ? "/ysz-d.png" : "/ysz-l.png"}
-                  alt="Yanis Sebastian Zürcher"
+                  src={isDarkTheme() ? "/sjs-dark.png" : "/sjs-light.png"}
+                  alt="Sarisa Jaya Surya"
                   className="w-full h-full object-cover"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.4 }}

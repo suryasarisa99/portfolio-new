@@ -1,5 +1,5 @@
 ﻿/**
- * Copyright (c) 2025 Yanis Sebastian Zürcher
+ * Copyright (c) 2025 Sarisa Jaya Surya
  *
  * This file is part of a proprietary project and is governed by the terms in LICENSE.
  * Unauthorized use, modification, or distribution is prohibited. All rights reserved.
@@ -37,6 +37,9 @@ import {
   JenkinsOriginal,
   PythonOriginal,
   JavaOriginal,
+  FlutterOriginal,
+  AngularOriginal,
+  SvelteOriginal,
 } from "devicons-react";
 import {
   SiEagle,
@@ -61,50 +64,54 @@ const Skills = () => {
     {
       title: "Frontend",
       skills: [
-        { name: "React", icon: ReactOriginal, level: 80 },
-        { name: "Next.js", icon: NextjsOriginal, level: 80 },
-        { name: "shadcn/ui", icon: SiShadcnui, level: 70 },
-        { name: "Tailwind CSS", icon: TailwindcssOriginal, level: 65 },
-        { name: "Ant Design", icon: AntdesignOriginal, level: 60 },
-        { name: "JavaScript", icon: JavascriptOriginal, level: 60 },
-        { name: "TypeScript", icon: TypescriptOriginal, level: 50 },
+        { name: "React", icon: ReactOriginal, level: 85 },
+        { name: "Flutter", icon: FlutterOriginal, level: 60 },
+        { name: "JavaScript", icon: JavascriptOriginal, level: 80 },
+        { name: "TypeScript", icon: TypescriptOriginal, level: 70 },
+        { name: "Next.js", icon: NextjsOriginal, level: 40 },
+        // { name: "shadcn/ui", icon: SiShadcnui, level: 70 },
+        { name: "Tailwind CSS", icon: TailwindcssOriginal, level: 30 },
+        { name: "Angular", icon: AngularOriginal, level: 38 },
+        { name: "Svelte", icon: SvelteOriginal, level: 38 },
+        // { name: "Ant Design", icon: AntdesignOriginal, level: 60 },
       ],
     },
     {
       title: "Backend",
       skills: [
-        { name: "MongoDB", icon: MongodbOriginal, level: 80 },
-        { name: "Spring Boot", icon: SpringOriginal, level: 75 },
-        { name: "Java", icon: JavaOriginal, level: 70 },
-        { name: "Nginx", icon: NginxOriginal, level: 61 },
-        { name: "Redis", icon: RedisOriginal, level: 50 },
-        { name: "Node.js", icon: NodejsOriginal, level: 40 },
-        { name: "Bash for automation", icon: BashOriginal, level: 35 },
+        { name: "Python", icon: PythonOriginal, level: 75 },
+        { name: "Java", icon: JavaOriginal, level: 65 },
+        { name: "MongoDB", icon: MongodbOriginal, level: 70 },
+        // { name: "Spring Boot", icon: SpringOriginal, level: 75 },
+        // { name: "Nginx", icon: NginxOriginal, level: 61 },
+        // { name: "Redis", icon: RedisOriginal, level: 50 },
+        { name: "Node.js", icon: NodejsOriginal, level: 50 },
+        { name: "Bash for automation", icon: BashOriginal, level: 50 },
       ],
     },
-    {
-      title: "Tools",
-      skills: [
-        { name: "Git", icon: GitOriginal, level: 90 },
-        { name: "Visual Studio Code", icon: VscodeOriginal, level: 80 },
-        { name: "Docker", icon: DockerOriginal, level: 75 },
-        { name: "Linux", icon: LinuxOriginal, level: 72 },
-        { name: "Bun", icon: BunOriginal, level: 71 },
-        { name: "ESLint", icon: EslintOriginal, level: 70 },
-        { name: "Kubernetes", icon: KubernetesOriginal, level: 62 },
-        { name: "Grafana", icon: GrafanaOriginal, level: 60 },
-      ],
-    },
-    {
-      title: "Other",
-      skills: [
-        { name: "Agile Methodologies", icon: SiEagle, level: 80 },
-        { name: "CI/CD", icon: JenkinsOriginal, level: 75 },
-        { name: "OSINT", icon: SiOpensourceinitiative, level: 70 },
-        { name: "Kali Linux", icon: SiKalilinux, level: 60 },
-        { name: "Python", icon: PythonOriginal, level: 45 },
-      ],
-    },
+    // {
+    //   title: "Tools",
+    //   skills: [
+    //     { name: "Git", icon: GitOriginal, level: 90 },
+    //     { name: "Visual Studio Code", icon: VscodeOriginal, level: 80 },
+    //     // { name: "Docker", icon: DockerOriginal, level: 75 },
+    //     { name: "Linux", icon: LinuxOriginal, level: 72 },
+    //     // { name: "Bun", icon: BunOriginal, level: 71 },
+    //     // { name: "ESLint", icon: EslintOriginal, level: 70 },
+    //     // { name: "Kubernetes", icon: KubernetesOriginal, level: 62 },
+    //     // { name: "Grafana", icon: GrafanaOriginal, level: 60 },
+    //   ],
+    // },
+    // {
+    //   title: "Other",
+    //   skills: [
+    //     { name: "Agile Methodologies", icon: SiEagle, level: 80 },
+    //     { name: "CI/CD", icon: JenkinsOriginal, level: 75 },
+    //     { name: "OSINT", icon: SiOpensourceinitiative, level: 70 },
+    //     { name: "Kali Linux", icon: SiKalilinux, level: 60 },
+    //     { name: "Python", icon: PythonOriginal, level: 45 },
+    //   ],
+    // },
   ];
 
   return (

@@ -1,12 +1,12 @@
 /**
- * Copyright (c) 2025 Yanis Sebastian Zürcher
+ * Copyright (c) 2025 Sarisa Jaya Surya
  *
  * This file is part of a proprietary project and is governed by the terms in LICENSE.
  * Unauthorized use, modification, or distribution is prohibited. All rights reserved.
  * For permissions, contact yanis.sebastian.zuercher@gmail.com
  */
 
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { Briefcase } from "lucide-react";
 import { toast } from "sonner";
@@ -14,12 +14,10 @@ import { translations } from "@/lib/translations";
 import { useLanguage } from "@/lib/language-provider";
 import { useNavigate } from "react-router-dom";
 
-
-
 const HireMe = () => {
   const { language } = useLanguage();
   const t = translations[language];
-  
+
   const isHired = true;
   const navigate = useNavigate();
 
@@ -28,26 +26,22 @@ const HireMe = () => {
 
   const contactUrl = `/contact?subject=${encodeURIComponent(prefilledSubject)}&message=${encodeURIComponent(prefilledMessage)}`;
 
-
-
-    const handleHireClick = (e: React.MouseEvent) => {
-  //  e.preventDefault();
-  //   if (isHired === true) {
-  //     toast.error(t.hire.hiretitle, {
-  //       duration: 7000,
-  //       description: t.hire.hiretxt,
-  //       action: {
-  //         label: t.hire.hirelbl,
-  //         onClick: () => {
-  //           navigate(contactUrl);
-  //           toast.dismiss();
-  //         },
-  //       },
-  //     });
-  //   }
-   };
-  
-
+  const handleHireClick = (e: React.MouseEvent) => {
+    //  e.preventDefault();
+    //   if (isHired === true) {
+    //     toast.error(t.hire.hiretitle, {
+    //       duration: 7000,
+    //       description: t.hire.hiretxt,
+    //       action: {
+    //         label: t.hire.hirelbl,
+    //         onClick: () => {
+    //           navigate(contactUrl);
+    //           toast.dismiss();
+    //         },
+    //       },
+    //     });
+    //   }
+  };
 
   return (
     <div className="pointer-events-none fixed hidden lg:flex bottom-8 left-8 z-50">
@@ -56,9 +50,9 @@ const HireMe = () => {
         initial={{ opacity: 0, y: 40, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ type: "spring", stiffness: 220, damping: 20, delay: 0.4 }}
-        whileHover={{ 
+        whileHover={{
           scale: 1.03,
-          transition: { type: "spring", stiffness: 400, damping: 10 }
+          transition: { type: "spring", stiffness: 400, damping: 10 },
         }}
         className="relative isolate"
       >
@@ -67,10 +61,10 @@ const HireMe = () => {
             className="absolute inset-[-120%] rounded-[50%] blur-2xl opacity-70"
             style={{
               transformOrigin: "center",
-              background: `radial-gradient(circle, 
-                hsl(var(--primary)/40%) 0%, 
-                hsl(var(--secondary)/30%) 60%, 
-                transparent 80%)`
+              background: `radial-gradient(circle,
+                hsl(var(--primary)/40%) 0%,
+                hsl(var(--secondary)/30%) 60%,
+                transparent 80%)`,
             }}
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
@@ -80,11 +74,11 @@ const HireMe = () => {
         <Link
           to={contactUrl}
           onClick={handleHireClick}
-          aria-label="Hire Yanis Sebastian Zürcher"
-          className="relative inline-flex items-center gap-3 rounded-xl 
+          aria-label="Hire Sarisa Jaya Surya"
+          className="relative inline-flex items-center gap-3 rounded-xl
                      bg-background/30 backdrop-blur-md px-6 py-3
                      font-medium text-foreground shadow-md
-                     ring-1 ring-foreground/5 
+                     ring-1 ring-foreground/5
                      hover:ring-primary/20 hover:text-primary
                      active:scale-98 transition-all duration-300"
         >
